@@ -1,4 +1,4 @@
 <h1>Nodes</h1>
 <ng-template ngFor let-node [ngForOf]="store.state$ | async">
-  <node-item [node]="node" (onToogleExpand)="onToogleExpand($event)" [expanded]="isExpanded(node)"></node-item>
+  <app-node-item [node]="node" (ToogleExpand)="ToogleExpand($event)" [expanded]="isExpanded(node)"></app-node-item>
 </ng-template>

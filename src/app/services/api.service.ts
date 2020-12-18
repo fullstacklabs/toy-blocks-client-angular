@@ -18,7 +18,7 @@ export class ApiService {
     if (params) {
       reqOpts.params = new HttpParams();
 
-      for (let k in params) {
+      for (const k in params) {
         if (params.hasOwnProperty(k)) {
           reqOpts.params.set(k, params[k]);
         }

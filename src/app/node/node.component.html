@@ -4,7 +4,7 @@
       {{ node.name || 'Unknown' }}
     </h1>
     <div class="toolbar">
-      <status [loading]="node.loading" [online]="node.online"></status>
+      <app-status [loading]="node.loading" [online]="node.online"></app-status>
       <button class="expander" [ngClass]="{ expanded: expanded }" (click)="handleToogleExpand(node)"></button>
     </div>
   </article>

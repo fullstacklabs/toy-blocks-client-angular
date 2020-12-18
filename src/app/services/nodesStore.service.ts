@@ -1,13 +1,13 @@
-import { Injectable } from "@angular/core";
-import { ApiService } from "./api.service";
-import { forkJoin, of } from "rxjs";
-import { map, catchError } from "rxjs/operators";
-import { Store } from "./store";
-import { Node } from "src/models/node.model";
-import { State } from "./state";
+import { Injectable } from '@angular/core';
+import { ApiService } from './api.service';
+import { forkJoin, of } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
+import { Store } from './store';
+import { Node } from 'src/models/node.model';
+import { State } from './state';
 
 @Injectable({
-  providedIn: "root",
+  providedIn: 'root'
 })
 export class NodesStore extends Store<Node[]> {
   constructor(private api: ApiService) {
@@ -21,11 +21,11 @@ export class NodesStore extends Store<Node[]> {
   }
 
   public _getStatus() {
-    const status = this.state.map((node) => {
+    const status = this.state.map(node => {
       return this.api.get(`${node.url}/api/v1/status`).pipe(
-        catchError((error) =>
+        catchError(error =>
           of({
-            node_name: false,
+            node_name: false
           })
         ),
         map(({ node_name }) => {
@@ -33,7 +33,7 @@ export class NodesStore extends Store<Node[]> {
             ...node,
             name: node_name,
             online: !!node_name,
-            loading: false,
+            loading: false
           };
         })
       );

@@ -3,7 +3,7 @@ import { Node } from '../../models/node.model';
 import { NodesStore } from '../services/nodesStore.service';
 
 @Component({
-  selector: 'node-list',
+  selector: 'app-node-list',
   templateUrl: './nodes.component.html',
   styleUrls: ['./nodes.component.css']
 })
@@ -16,7 +16,7 @@ export class NodesComponent implements OnInit {
     this.store.getStatus();
   }
 
-  onToogleExpand(node: Node): void {
+  ToogleExpand(node: Node): void {
     this.expandedNodeURL = node.url === this.expandedNodeURL ? null : node.url;
   }
 
