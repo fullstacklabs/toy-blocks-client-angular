@@ -1,15 +1,15 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { HttpClient } from "@angular/common/http";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { HttpClient } from '@angular/common/http';
 import {
   HttpClientTestingModule,
   HttpTestingController,
-} from "@angular/common/http/testing";
+} from '@angular/common/http/testing';
 
-import { NodeComponent } from "../node/node.component";
-import { StatusComponent } from "../status/status.component";
-import { NodesComponent } from "./nodes.component";
+import { NodeComponent } from '../node/node.component';
+import { StatusComponent } from '../status/status.component';
+import { NodesComponent } from './nodes.component';
 
-describe("NodesComponent", () => {
+describe('NodesComponent', () => {
   let httpClient: HttpClient;
   let httpTestingController: HttpTestingController;
 
@@ -32,7 +32,7 @@ describe("NodesComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
