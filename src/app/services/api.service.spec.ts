@@ -1,13 +1,13 @@
-import { TestBed } from "@angular/core/testing";
-import { HttpClient } from "@angular/common/http";
+import { TestBed } from '@angular/core/testing';
+import { HttpClient } from '@angular/common/http';
 import {
   HttpClientTestingModule,
   HttpTestingController,
-} from "@angular/common/http/testing";
+} from '@angular/common/http/testing';
 
-import { ApiService } from "./api.service";
+import { ApiService } from './api.service';
 
-describe("ApiService", () => {
+describe('ApiService', () => {
   let httpClient: HttpClient;
   let httpTestingController: HttpTestingController;
 
@@ -18,7 +18,7 @@ describe("ApiService", () => {
     httpTestingController = TestBed.get(HttpTestingController);
   });
 
-  it("should be created", () => {
+  it('should be created', () => {
     const service: ApiService = TestBed.get(ApiService);
     expect(service).toBeTruthy();
   });
